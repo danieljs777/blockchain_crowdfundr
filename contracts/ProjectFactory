@@ -1,0 +1,24 @@
+//SPDX-License-Identifier: Unlicense
+pragma solidity ^0.8.0;
+
+import "hardhat/console.sol";
+import "./Crowdfund.sol";
+
+contract ProjectFactory
+{
+    Crowdfund[] public projects;
+
+    function createProject(string memory _name, uint256 _goalAmount) external returns(Crowdfund)
+    {
+
+        Crowdfund project = new Crowdfund(_name, _goalAmount, msg.sender);
+        projects.push(project);
+        return project;
+    }
+
+    function getProjects() external view returns(Crowdfund[] memory)
+    {
+        return projects;
+
+    }
+}
