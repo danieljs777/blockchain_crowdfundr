@@ -144,7 +144,7 @@ contract Crowdfund
         }
         else
         {
-            contributions[msg.sender] += msg.value
+            contributions[msg.sender] += msg.value;
 
             contributors.push(msg.sender);
 

@@ -6,7 +6,7 @@
     "chai": "^4.3.4",
     "ethereum-waffle": "^3.4.0",
     "ethers": "^5.5.1",
-    "hardhat": "^2.6.8",
+    "hardhat": "^2.8.2",
     "nodemon": "^2.0.15"
   },
   "dependencies": {
